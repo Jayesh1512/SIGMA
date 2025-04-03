@@ -1,11 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  webpack: (config) => {
-    config.externals.push({
-      "utf-8-validate": "commonjs utf-8-validate",
-      bufferutil: "commonjs bufferutil",
-      canvas: "commonjs canvas",
-    });
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.externals.push({
+        "utf-8-validate": "commonjs utf-8-validate",
+        bufferutil: "commonjs bufferutil",
+        canvas: "commonjs canvas",
+      });
+    }
 
     return config;
   },
@@ -17,6 +19,11 @@ const nextConfig = {
         port: "",
       },
     ],
+  },
+  transpilePackages: ['@splinetool/react-spline', '@splinetool/runtime'],
+  swcMinify: false,
+  experimental: {
+    swcLoader: false,
   },
 };
 

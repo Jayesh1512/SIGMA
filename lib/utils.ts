@@ -109,11 +109,7 @@ export const exportToPdf = () => {
     unit: "px",
     format: [canvas.width, canvas.height],
   });
-
-  // get the canvas data url
   const data = canvas.toDataURL();
-
-  // add the image to the pdf
   doc.addImage(data, "PNG", 0, 0, canvas.width, canvas.height);
 
   // download the pdf

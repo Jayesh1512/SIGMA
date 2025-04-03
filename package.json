@@ -9,9 +9,7 @@
     "lint": "next lint"
   },
   "author": {
-    "name": "Sanidhya Kumar Verma",
-    "email": "sanidhya.verma12345@gmail.com",
-    "url": "https://github.com/sanidhyy"
+    "name": "Jayess"
   },
   "description": "A minimalist Figma clone using Fabric.js and Liveblocks for real-time collaboration.",
   "keywords": [
@@ -49,43 +47,28 @@
     "html",
     "css"
   ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/sanidhyy/figma-clone.git"
-  },
-  "homepage": "https://github.com/sanidhyy/figma-clone#readme",
-  "bugs": {
-    "url": "https://github.com/sanidhyy/figma-clone/issues",
-    "email": "sanidhya.verma12345@gmail.com"
-  },
-  "funding": [
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/sanidhy"
-    },
-    {
-      "type": "Buy me a coffee",
-      "url": "https://www.buymeacoffee.com/sanidhy"
-    }
-  ],
   "dependencies": {
     "@liveblocks/client": "^1.12.0",
     "@liveblocks/react": "^1.12.0",
     "@liveblocks/react-comments": "^1.12.0",
     "@radix-ui/react-context-menu": "^2.2.1",
+    "@radix-ui/react-dialog": "^1.1.6",
     "@radix-ui/react-dropdown-menu": "^2.1.6",
     "@radix-ui/react-label": "^2.1.2",
     "@radix-ui/react-select": "^2.1.6",
     "@radix-ui/react-slot": "^1.1.2",
+    "@splinetool/react-spline": "^4.0.0",
+    "@splinetool/runtime": "^1.9.82",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "fabric": "^5.3.0",
+    "framer-motion": "^12.6.3",
     "jspdf": "^2.5.2",
     "lucide-react": "^0.462.0",
     "next": "14.2.13",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "shadcn": "^2.4.0-canary.17",
     "tailwind-merge": "^3.1.0",
     "tailwindcss-animate": "^1.0.7",
     "uuid": "^11.1.0"

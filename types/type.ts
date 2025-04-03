@@ -183,3 +183,30 @@ export type CursorChatProps = {
     }>
   ) => void;
 };
+// Add this to your existing types file or create a new one if needed
+export type HistoryEntry = {
+  timestamp: string
+  action: string
+  objectId?: string
+  details?: any
+  userId: string
+  canvasState?: any // Canvas state to allow revisiting
+}
+
+// Include your other existing types here
+export type ActiveElement = {
+  name: string
+  value: string
+  icon: string
+}
+
+export type Attributes = {
+  width: string
+  height: string
+  fontSize: string
+  fontFamily: string
+  fontWeight: string
+  fill: string
+  stroke: string
+}
+
