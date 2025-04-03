@@ -21,10 +21,7 @@ const nextConfig = {
     ],
   },
   transpilePackages: ['@splinetool/react-spline', '@splinetool/runtime'],
-  swcMinify: false,
-  experimental: {
-    swcLoader: false,
-  },
+
 };
 
 export default nextConfig;

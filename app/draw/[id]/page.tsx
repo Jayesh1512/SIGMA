@@ -107,9 +107,9 @@ export default function Editor({ params }: { params: { id: string } }) {
   const saveHistoryToStorage = useMutation(({ storage }, entry) => {
     if (!entry) return
 
-    const historyEntries = storage.get("historyEntries") || []
+    const historyEntries = storage.get("historyEntries" as any) || []
     historyEntries.push(entry)
-    storage.set("historyEntries", historyEntries)
+    (storage as any).set("historyEntries", historyEntries);
   }, [])
 
   const restoreCanvasState = (entry: HistoryEntry) => {
@@ -218,8 +218,8 @@ export default function Editor({ params }: { params: { id: string } }) {
       })
 
       // Add history entry when a path is created
-      if (options.path) {
-        addHistoryEntry("path_created", options.path.data?.objectId)
+      if ((options as any).path) {
+addHistoryEntry("path_created", (options as any).path?.data?.objectId);
       }
     })
 

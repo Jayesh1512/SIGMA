@@ -6,7 +6,7 @@ export default function LandingPage() {
 
   const toggleForm = () => setIsLogin(!isLogin);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     console.log("Form submitted");
   };

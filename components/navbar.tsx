@@ -27,8 +27,10 @@ export const Navbar = memo(
 
     return (
       <nav className="flex select-none items-center justify-between gap-4 bg-primary-black px-5 text-white">
-        <Image src="/logo.svg" alt="FigPro Logo" width={58} height={20} />
-
+        <div className = "flex items-center gap-2">
+          <Image src="/logo.png" alt="FigPro Logo" width={58} height={20} />
+          <p className="text-2xl">Sigma</p>
+        </div>
         <ul className="flex flex-row">
           {navElements.map((item: ActiveElement | any) => (
             <li
@@ -37,13 +39,11 @@ export const Navbar = memo(
                 if (Array.isArray(item.value)) return;
                 handleActiveElement(item);
               }}
-              className={`group flex items-center justify-center px-2.5 py-5
-            ${
-              isActive(item.value)
-                ? "bg-primary-green"
-                : "hover:bg-primary-grey-200"
-            }
-            `}
+              className={`group flex items-center justify-center px-2.5 py-5 ${
+                isActive(item.value)
+                  ? "bg-primary-green"
+                  : "hover:bg-primary-grey-200"
+              } `}
             >
               {/* If value is an array means it's a nav element with sub options i.e., dropdown */}
               {Array.isArray(item.value) ? (
@@ -86,18 +86,8 @@ export const Navbar = memo(
           ))}
         </ul>
 
-        <div className="flex-row items-center justify-center gap-x-6 md:flex">
+        <div className="mr-32 flex-row items-center justify-center gap-x-6 md:flex">
           <ActiveUsers />
-
-          <Link
-            href={links.sourceCode}
-            target="_blank"
-            rel="noreferrer noopener"
-            className="hidden md:block"
-            title="Source Code"
-          >
-            <Image src="/github.svg" alt="GitHub" height={36} width={36} />
-          </Link>
         </div>
       </nav>
     );
