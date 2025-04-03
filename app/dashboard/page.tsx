@@ -29,7 +29,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative flex flex-col items-center justify-center h-screen text-center bg-black text-white">
+    <div className="relative flex flex-col bg-cover items-center justify-center h-screen text-center bg-black text-white">
       {/* Background Effect */}
       <div className="absolute inset-0">
         <img src="/your-background-image.png" alt="Background" className="absolute inset-0 w-full h-full object-cover opacity-50" />

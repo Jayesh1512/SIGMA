@@ -19,7 +19,12 @@ export const viewport: Viewport = {
   themeColor: "#14181F",
 };
 
-export const metadata: Metadata = siteConfig;
+export const metadata = {
+  title: "Sigma - Your Custom Whiteboard",
+  icons: {
+    icon: "/logo.png", // Place your favicon in the public folder
+  },
+};
 
 const RootLayout = ({ children }: Readonly<PropsWithChildren>) => {
   return (
